@@ -2,7 +2,7 @@ package leecode;
 
 import leecode.Algorithms_94.TreeNode;
 
-public class Algorithm_108 {
+public class Algorithms_108 {
 
 	public static void main2(String[] args) {
 		// TODO Auto-generated method stub
