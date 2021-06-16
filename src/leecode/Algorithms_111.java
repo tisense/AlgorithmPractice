@@ -4,6 +4,7 @@ import leecode.Algorithms_94.TreeNode;
 
 /**
  * 二叉树的最小深度
+ * 
  * @author renqi
  *
  */
@@ -18,15 +19,14 @@ public class Algorithms_111 {
 		if (root == null) {
 			return 0;
 		}
-		
 		int leftH = minDepth(root.left);
 		int rightH = minDepth(root.right);
 		if (leftH == 0 && rightH == 0) {
 			return 1;
-		}else if( leftH != 0 && rightH != 0) {
+		} else if (leftH != 0 && rightH != 0) {
 			return Math.min(leftH, rightH) + 1;
-		}else {
+		} else {
 			return Math.max(leftH, rightH) + 1;
 		}
-    }
+	}
 }
