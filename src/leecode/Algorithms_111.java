@@ -4,7 +4,7 @@ import leecode.Algorithms_94.TreeNode;
 
 /**
  * 二叉树的最小深度
- * 
+ *
  * @author renqi
  *
  */
