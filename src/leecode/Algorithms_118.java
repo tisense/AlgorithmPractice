@@ -43,4 +43,32 @@ public class Algorithms_118 {
 		}
 		return results;
 	}
+
+	/**
+	 * leetcode119 输出杨辉三角第rowIndex行
+	 * 
+	 * @param rowIndex
+	 * @return
+	 */
+	public List<Integer> getRow(int rowIndex) {
+
+		List<Integer> row = new ArrayList<Integer>();
+		List<Integer> result = new ArrayList<Integer>();
+		for (int i = 0; i < rowIndex + 1; i++) {
+
+			if (i == 0) {
+				result.add(1);
+			} else {
+				row.clear();
+				row.addAll(result);
+				result.clear();
+				for (int j = 0; j <= i; j++) {
+					int first = j - 1 < 0 ? 0 : row.get(j - 1);
+					int second = j >= row.size() ? 0 : row.get(j);
+					result.add(first + second);
+				}
+			}
+		}
+		return result;
+	}
 }
